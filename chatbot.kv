@@ -1,0 +1,33 @@
+<display>:
+	
+    
+    bot: _bot
+	Image:
+		source: 'elina.png'
+		size: root.width, root.height
+		
+	Button:
+		text: 'SEND'
+		pos: 3*root.right/5, root.top/12
+		size: root.right/3, root.top/10
+		on_press: root.send(*args)
+		font_size: 25
+    Label:
+        id: _bot
+		color: 0,0,0,1
+		canvas.before:
+			Color: 
+				rgb: .94,.94,.94
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		
+		pos: root.right/2, 5*root.top/7
+        size: 4*root.right/10, root.top/4
+		font_size: '20sp'
+		text_size: self.size
+		halign: 'left'
+		valign: 'top'
+
+
+
